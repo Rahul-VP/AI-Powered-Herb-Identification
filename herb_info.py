@@ -13,7 +13,7 @@ from typing import Dict, List, Tuple
 load_dotenv()
 
 # Configure Gemini API - Hardcoded for reliability
-GEMINI_API_KEY = "AIzaSyCDKOW-DSNkcyWWsb1T3uGC1ezCEPDmWSo"
+GEMINI_API_KEY = " "
 genai.configure(api_key=GEMINI_API_KEY)
 
 
@@ -277,3 +277,4 @@ def get_safety_color(risk_level: str) -> str:
         return "#dc3545"  # Red
     else:
         return "#6c757d"  # Gray
+
