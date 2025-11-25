@@ -181,76 +181,7 @@ Indian-Medicinal-Plant-classifier/
 │   ├── model.torchscript.pt           # TorchScript export
 │   └── model.onnx                     # ONNX export
 └── 📂 .git/                           # Git repository
-```
-
 ---
-
-## 🔧 Installation & Setup
-
-### Prerequisites
-
-- Python 3.8 or higher
-- CUDA-capable GPU (optional, for faster inference)
-- 4GB+ RAM
-
-### Quick Start
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Ravikiran27/Indian-Medicinal-Plant-classifier.git
-   cd Indian-Medicinal-Plant-classifier
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configure Gemini AI (Optional - for medicinal information features)**
-   
-   Get a free API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   
-   Create a `.env` file in the project root:
-   ```bash
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-   
-   **⚠️ Important**: Never commit your `.env` file to GitHub (already in `.gitignore`)
-
-4. **Train the model (on Kaggle)**
-   - Upload `notebookd41e7c18d6.ipynb` to [Kaggle](https://www.kaggle.com/)
-   - Add the [Indian Medicinal Plant Dataset](https://www.kaggle.com/datasets/aryashah2k/indian-medicinal-plant-image-dataset) as input
-   - Enable GPU accelerator (P100/T4)
-   - Click "Run All"
-   - Download `impc_outputs/` folder after training
-
-5. **Run the Streamlit app**
-   ```bash
-   streamlit run app.py
-   ```
-
-6. **Open your browser**
-   - Navigate to `http://localhost:8501`
-   - Upload a plant leaf image
-   - Get instant predictions with medicinal information!
-
----
-
-## 🎯 Usage
-
-### Training on Kaggle
-
-```python
-# Configuration (in notebook)
-CFG = {
-    'model_name': 'efficientnet_b0',
-    'img_size': 256,
-    'epochs': 10,
-    'batch_size': 32,
-    'learning_rate': 3e-4,
-    'fp16': True  # Mixed precision training
-}
-```
 
 ### Inference with Streamlit
 
@@ -405,24 +336,7 @@ Stratified sampling ensures balanced class distribution across splits.
   - Seasonal availability information
   - Growing conditions and cultivation tips
 
-### Research Directions
-
-- Fine-grained classification of plant parts (leaf, flower, root)
-- Disease detection in medicinal plants
-- Growth stage identification
-- Geographic distribution mapping
-
 ---
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
 
 ### Areas for Contribution
 
@@ -439,33 +353,7 @@ Contributions are welcome! Here's how you can help:
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-### Dataset License
-
-The Indian Medicinal Plant Dataset is provided under **CC BY 4.0** license. Please cite the original dataset creators:
-
-```bibtex
-@dataset{indian_medicinal_plants_2023,
-  title={Indian Medicinal Plant Image Dataset},
-  author={Shah, Arya and others},
-  year={2023},
-  publisher={Kaggle},
-  url={https://www.kaggle.com/datasets/aryashah2k/indian-medicinal-plant-image-dataset}
-}
-```
-
 ---
-
-## 🙏 Acknowledgments
-
-- **Dataset**: [Indian Medicinal Plant Image Dataset](https://www.kaggle.com/datasets/aryashah2k/indian-medicinal-plant-image-dataset) by Arya Shah et al.
-- **Model Architecture**: [EfficientNet](https://arxiv.org/abs/1905.11946) by Google Research
-- **Framework**: [PyTorch](https://pytorch.org/) and [torchvision](https://pytorch.org/vision/)
-- **Deployment**: [Streamlit](https://streamlit.io/) for rapid prototyping
-- **Visualization**: [Plotly](https://plotly.com/) for interactive charts
-- **Platform**: [Kaggle](https://www.kaggle.com/) for free GPU training
-- **AI Information**: [Google Gemini AI](https://ai.google.dev/) for medicinal knowledge
-- **Traditional Knowledge**: Ayurvedic texts and Karnataka herbal medicine practitioners
-
 <div align="center">
 
 **Made with ❤️ for preserving traditional medicinal plant knowledge**
